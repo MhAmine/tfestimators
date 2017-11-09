@@ -122,7 +122,7 @@ train.tf_estimator <- function(object,
     )
   
   if (tf_version() >= '1.4') {
-    args$saving_listeners <- saving_listeners
+    # args$saving_listeners <- saving_listeners
   }
 
   # args$hooks <- resolve_train_hooks(hooks, verbose, steps, view_metrics, object)
