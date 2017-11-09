@@ -125,11 +125,11 @@ train.tf_estimator <- function(object,
     args$saving_listeners <- saving_listeners
   }
 
-  args$hooks <- resolve_train_hooks(hooks, verbose, steps, view_metrics, object)
+  # args$hooks <- resolve_train_hooks(hooks, verbose, steps, view_metrics, object)
   
   logging_level <- if (debug_logging) tf$logging$DEBUG else tf$logging$WARN
   with_logging_verbosity(logging_level, {
-    # do.call(object$estimator$train, args)
+    do.call(object$estimator$train, args)
   })
   
   if (verbose)
