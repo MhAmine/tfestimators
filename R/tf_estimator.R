@@ -129,7 +129,7 @@ train.tf_estimator <- function(object,
   
   logging_level <- if (debug_logging) tf$logging$DEBUG else tf$logging$WARN
   with_logging_verbosity(logging_level, {
-    do.call(object$estimator$train, args)
+    # do.call(object$estimator$train, args)
   })
   
   if (verbose)

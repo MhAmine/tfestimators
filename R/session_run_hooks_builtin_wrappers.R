@@ -79,7 +79,7 @@ hook_checkpoint_saver <- function(checkpoint_dir,
                                   listeners = NULL)
 {
   if (!is.null(save_secs) && !is.null(save_steps)) {
-    stop(" Only one of save_secs or save_steps can be specified")
+    stop("Only one of save_secs or save_steps can be specified")
   }
   
   tf$python$training$basic_session_run_hooks$CheckpointSaverHook(
