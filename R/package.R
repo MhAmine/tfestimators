@@ -54,12 +54,12 @@ np <- NULL
   )
   
   # core modules
-  estimator_lib <<- import("tensorflow.python.estimator.estimator", delay_load = delay_load)
-  feature_column_lib <<- import("tensorflow.python.feature_column.feature_column", delay_load = delay_load)
-  canned_estimator_lib <<- import("tensorflow.python.estimator.canned", delay_load = delay_load)
+  estimator_lib <<- import("tensorflow.python.estimator.estimator", delay_load = FALSE)
+  feature_column_lib <<- import("tensorflow.python.feature_column.feature_column", delay_load = FALSE)
+  canned_estimator_lib <<- import("tensorflow.python.estimator.canned", delay_load = FALSE)
 
   # other modules
-  np <<- import("numpy", convert = FALSE, delay_load = TRUE)
+  np <<- import("numpy", convert = FALSE, delay_load = FALSE)
 }
 
 check_tensorflow_version <- function(displayed_warning) {
